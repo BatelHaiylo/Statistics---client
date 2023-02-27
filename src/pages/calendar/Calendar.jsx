@@ -1,7 +1,12 @@
-import React from 'react'
+import { Box } from "@mui/material"
+import Heading from "../../components/heading/Heading"
 
 export default function Calendar() {
   return (
-    <div>Calendar</div>
+    <Box m="20px">
+    <Box display="flex" justifyContent="space-between" alignItems="center">
+    <Heading title="CALENDAR" subtitle="Welcome to your Calendar"/>
+    </Box>
+  </Box>
   )
-}
+};
