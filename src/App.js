@@ -1,7 +1,8 @@
 import { ColorModeContext, useMode } from "./theme/context";
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ProSidebarProvider } from "react-pro-sidebar";
 import TopBar from "./components/static/TopBar";
-import SideBar from "./components/static/SideBar";
+import SideBar from "./components/static/sidebar/SideBar";
 import Router from "./route/Router";
 
 //CssBaseline is going to reset the css to default values.
@@ -12,14 +13,16 @@ export default function App() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <div className="app">
-          <main className="content">
-            <TopBar />
+        <ProSidebarProvider>
+          <CssBaseline />
+          <div className="app">
             <SideBar />
-            <Router />
-          </main>
-        </div>
+            <main className="content">
+              <TopBar />
+              <Router />
+            </main>
+          </div>
+        </ProSidebarProvider>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
