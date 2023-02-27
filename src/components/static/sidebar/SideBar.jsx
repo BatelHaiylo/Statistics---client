@@ -18,7 +18,7 @@ export default function SideBar() {
     <Box display="flex" height="100vh">
       <Sidebar
         rootStyles={{
-          backgroundColor: colors.primary[400],
+          backgroundColor: colors.primary[900],
         }}
       >
         <Menu>
@@ -62,7 +62,7 @@ export default function SideBar() {
                 >
                   Batel Haiylo
                 </Typography>
-                <Typography variant="h5" color={colors.redAccent[500]}>
+                <Typography variant="h5" color={colors.greenAccent[600]}>
                   VP Fancy Admin
                 </Typography>
               </Box>
@@ -80,7 +80,7 @@ export default function SideBar() {
 
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color={colors.greenAccent[600]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Data
@@ -98,7 +98,7 @@ export default function SideBar() {
 
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color={colors.greenAccent[600]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Pages
@@ -116,7 +116,7 @@ export default function SideBar() {
 
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color={colors.greenAccent[600]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Charts
