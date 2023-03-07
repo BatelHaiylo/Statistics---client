@@ -1,13 +1,15 @@
 import axios from "axios";
 
-axios.create({
-  baseURL: "http://localhost:3030/auth",
-});
+axios.defaults.baseURL = 
+'http://localhost:3030/auth'
 
 export const getUsers = async () => {
-  return await axios.get().then(res=>res.data)
-};
+  const response = await axios.get()
 
+  const user = await response.data;
+  return user;
+}; 
+// console.log("getUsers:",getUsers());
 export const getUserByEmail = async (email) => {
   const response = await axios.get(`/${email}`);
 

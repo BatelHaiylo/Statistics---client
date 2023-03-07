@@ -10,7 +10,6 @@ import {getUsers} from "./service/users";
 //ThemeProvider is going to provide the ability to pass in the themes into MUI components.
 export default function App() {
   const [theme, colorMode] = useMode();
-  console.log(getUsers()); 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
