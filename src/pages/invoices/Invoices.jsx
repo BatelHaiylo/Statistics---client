@@ -2,17 +2,13 @@ import Heading from "../../components/heading/Heading";
 import { getInvoices } from "../../service/invoices";
 import { useState, useEffect } from "react";
 import Table from "../../components/table/Table";
-import { Box, useTheme, Typography } from "@mui/material";
-import { tokens } from "../../route/theme";
+import { Box } from "@mui/material";
 
 export default function Invoices() {
   const [invoices, setInvoices] = useState([]);
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   useEffect(() => {
     getInvoices().then((res) => setInvoices(res.invoices));
   }, []);
-console.log(invoices);
 
 const columns = [
   { field: "_id", headerName: "ID" },
